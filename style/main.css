@@ -27,9 +27,7 @@
   transition: all 0.3s;
 }
 .nav-link-custom.active-link-custom::after {
-
   transform: scaleX(100%);
-
 }
 .wrap-input-btn {
   margin: 0 auto;
@@ -239,6 +237,70 @@ textarea {
   outline: none;
   height: 120px !important;
 }
+.card-bestsell {
+  border: 14px solid rgba(0, 176, 255, 1);
+  border-top: none;
+  border-radius: 4px;
+  width: 310px;
+  transition: all ease 0.2s;
+}
+.card-bestsell:hover {
+  transform: translateY(-30px);
+}
+.card-bestsell > img {
+  background: radial-gradient(
+    circle,
+    rgb(0, 174, 255) 0%,
+    rgba(91, 230, 255, 0.149) 54%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 60% !important;
+}
+.detail-cart {
+  width: 100%;
+
+  border-top: 14px solid rgba(0, 176, 255, 1);
+}
+.text-rate-star {
+  font-size: 13px !important;
+}
+.star-rate {
+  font-size: 14px !important;
+}
+.input-form {
+  outline: none !important;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+  border: 2px solid #a5a5a53b;
+  border-radius: 6px !important;
+  outline: none !important;
+}
+.input-form:focus {
+  box-shadow: 1px 2px 3px -1px #6696ff;
+}
+
+.modal-size {
+  width: 260px !important;
+  margin: 0 auto !important;
+}
+.check-box {
+  height: 18px;
+  font-size: 30px;
+  padding: 10px !important;
+  width: 18px;
+}
+.icon-input {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  color: gray;
+  opacity: 0.6;
+}
+.input-form:focus .icon-input {
+  color: blue !important ;
+  opacity: 1 !important;
+}
+
 @media screen and (max-width: 768px) {
   .all-type > div:not(:nth-child(1)) {
     border: none !important;
@@ -248,6 +310,9 @@ textarea {
   .wrap-input-btn {
     width: 100% !important;
     transition: ease 0.3s;
+  }
+  .btn-input-nav {
+    font-size: 14px !important;
   }
   .wrap-img > img {
     height: 100% !important;

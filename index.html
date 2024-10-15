@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
-    <nav class="container-fluid px-5 mt-3 position-sticky top-0">
+    <nav class="container-fluid px-2 px-sm-5 mt-3 position-sticky top-0">
       <div
         class="d-flex justify-content-between border border-primary rounded-5 py-2 align-items-center px-2 position-relative"
       >
@@ -71,10 +71,18 @@
         <div
           class="d-flex justify-content-center align-items-center gap-2 wrap-btn-nav"
         >
-          <button class="btn btn-primary btn-nav rounded-5">
+          <button
+            class="btn btn-primary btn-nav rounded-5"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
             <i class="fa-solid fa-cart-shopping cart-icon"></i>
           </button>
-          <button class="btn btn-primary btn-input-nav battdombong rounded-5">
+          <button
+            class="btn btn-primary btn-input-nav battdombong rounded-5"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModall"
+          >
             ចុះ​ឈ្មោះ
           </button>
           <button
@@ -89,7 +97,115 @@
         </div>
       </div>
     </nav>
-    <section class="container-fluid px-5 mx-auto mt-3">
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title battdombong" id="exampleModalLabel">
+              ទំនិញរបស់អ្នក
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body battdombong">ទទេ...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger battdombong"
+              data-bs-dismiss="modal"
+            >
+              បិទ
+            </button>
+            <button type="button" class="btn btn-primary battdombong">
+              ទូទាត់លុយ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModall"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabell"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-size">
+          <div class="modal-body row gap-3">
+            <div class="col-12 battdombong text-center">
+              <p class="btn btn-primary fs-4 fw-medium px-2 py-1">ចូលគណនី</p>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-center align-items-center position-relative"
+            >
+              <input
+                type="email"
+                placeholder="អុីម៉ែល"
+                required
+                class="battdombong fw-light w-100 px-3 py-2 input-form d-block m-0 border-primary"
+              />
+              <span class="position-absolute icon-input fw-light">
+                <i class="fa-solid fa-at"></i>
+              </span>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-center align-items-center position-relative"
+            >
+              <input
+                type="password"
+                required
+                placeholder="ពាក្យសម្ងាត់"
+                class="battdombong w-100 fw-light px-3 py-2 input-form d-block m-0 border-primary"
+              />
+              <span class="position-absolute icon-input fw-light">
+                <i class="fa-solid fa-eye"></i>
+              </span>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-between align-items-center"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center gap-1"
+              >
+                <input type="checkbox" class="check-box" />
+                <p class="m-0 battdombong">ចងចាំខ្ញុំ</p>
+              </div>
+            </div>
+
+            <div
+              class="col-12 d-flex justify-content-center align-items-center"
+            >
+              <button class="btn btn-primary w-100 battdombong">
+                ចូលគណនី​
+              </button>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-center align-items-center"
+            >
+              <p
+                class="battdombong m-0 text-decoration-underline"
+                style="cursor: pointer; font-size: 13px"
+              >
+                ភ្លេចពាក្យសម្ងាត់
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="container-fluid px-2 px-sm-5 mx-auto mt-3">
       <div class="position-relative wrap-input-btn battdombong">
         <input
           type="text"
@@ -156,7 +272,7 @@
         </ul>
       </div>
     </div>
-    <section class="hero-section container-fluid px-5 py-2">
+    <section class="hero-section container-fluid px-2 px-sm-5 py-2">
       <div
         class="overflow-hidden position-relative h-100 py-5 bg-body-tertiary border-1 border-secondary rounded-1 d-flex justify-content-center gap-lg-5 gap-md-3 gap-sm-0 align-items-center flex-wrap-reverse"
       >
@@ -196,7 +312,7 @@
         </div>
       </div>
     </section>
-    <section class="data-section px-5 mt-2">
+    <section class="data-section px-2 px-sm-5 mt-2">
       <div class="w-100 h-100 rounded-2 bg-body-tertiary p-2">
         <div
           class="d-flex justify-content-start align-items-center gap-1 w-100"
@@ -234,8 +350,8 @@
         </div>
       </div>
     </section>
-    <section class="best-seller-section px-5 container-fluid mt-4">
-      <div class="w-100 h-100 rounded-2 p-2 bg-body-tertiary">
+    <section class="best-seller-section px-2 px-sm-5 container-fluid mt-4">
+      <div class="w-100 h-100 rounded-2 p-2">
         <div
           class="d-flex justify-content-start align-items-center gap-1 w-100"
         >
@@ -252,927 +368,471 @@
             <div
               class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
             >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div
               class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
             >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div
               class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
             >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
+              <div
+                class="card-bestsell d-flex justify-content-center align-items-top flex-column"
+              >
+                <img
+                  src="imgs/buberry-shirt.png"
+                  class="d-block mx-auto"
+                  alt=""
+                />
+                <div class="detail-cart bg-body-secondary">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-2 py-2 w-100"
                   >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
+                    <p class="m-0 p-0 fw-medium fs-5">Black buberry</p>
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <p
+                        class="px-2 py-1 m-0 btn btn-warning rounded-0 rounded-start-1 text-white"
+                      >
+                        60%
+                      </p>
+                      <p
+                        class="px-2 py-1 m-0 btn btn-primary rounded-0 rounded-end-1"
+                      >
+                        $29.99
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100 px-2"
                   >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide flex-wrap gap-4 d-flex justify-content-evenly align-items-center"
-            >
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="card-sell border-2">
-                <img src="imgs/buberry-shirt.png" alt="" />
-                <div class="px-3 w-100">
-                  <p
-                    class="d-block title-item-shirt mx-auto text-center battdombong border border-2 btn btn-outline-primary rounded-1 border-primary"
-                  >
-                    អាវបុរស <span>Black Bueberry</span>
-                  </p>
-                </div>
-                <div class="d-flex justify-content-start align-content-center">
-                  <p
-                    class="price px-2 py-1 text-light bg-primary rounded-end-5"
-                  >
-                    $15.99
-                  </p>
-                  <button class="px-2 py-1 text-light btn-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div
-                  class="btn-order d-flex justify-content-center align-items-center gap-2 flex-column position-absolute"
-                >
-                  <span class="inorder"
-                    ><i class="fa-solid fa-cart-plus"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></span>
-                  <span class="inorder"
-                    ><i class="fa-solid fa-bars-staggered"></i
-                  ></span>
+                    <p class="text-rate-star m-0 battdombong">
+                      គុណភាពសាច់ក្រណាត់ល្អស្អាត
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-1"
+                    >
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                      <i class="fa-solid fa-star text-warning star-rate"></i>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <button class="battdombong btn btn-primary w-100 rounded-0">
+                      ដាក់ចូលកន្ត្រក <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1214,7 +874,7 @@
       </div>
     </section>
     <!-- brand -->
-    <section class="container-fluid px-5 py-5 mt-3">
+    <section class="container-fluid px-2 px-sm-5 py-5 mt-3">
       <div
         class="brand-bar d-flex justify-content-start justify-content-lg-center overflow-y-hidden overflow-x-auto gap-5 align-items-center border border-2 shadow rounded-2 border-primary position-relative pt-5"
       >
@@ -1237,7 +897,7 @@
       </div>
     </section>
     <!-- get in touch -->
-    <section class="px-5 container-fluid bg-body-tertiary">
+    <section class="px-2 px-sm-5 container-fluid bg-body-tertiary">
       <div class="w-100 h-100 rounded-2 bg-body-tertiary p-3">
         <div
           class="d-flex justify-content-start align-items-center gap-1 w-100"
